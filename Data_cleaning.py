@@ -5,7 +5,7 @@ import seaborn as sns
 import streamlit as st
 
 # Load data
-df = pd.read_csv(r'C:\Users\Rukmal\PycharmProjects\pythonProject\melbourne.csv')
+df = pd.read_csv('melbourne.csv')
 
 # Data preprocessing
 df['Date'] = pd.to_datetime(df['Date'], format='mixed', errors='coerce')
@@ -131,7 +131,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 
-st.sidebar.image(r'C:\Users\Rukmal\PycharmProjects\pythonProject\Internship\housing-market-.jpg')
+st.sidebar.image('housing-market-.jpg')
 
 
 page = st.sidebar.selectbox("Select Page", ["KPIs and Main Charts", "Other Charts and Overview", "Price Calculator"])
